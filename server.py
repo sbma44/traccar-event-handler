@@ -89,8 +89,8 @@ class GetHandler(BaseHTTPRequestHandler):
         if len(GetHandler.traccar_events) > 100:
             GetHandler.traccar_events.pop(0)
 
-        if msg.get('speed_mph', 0) > 3:
-            print('speed > 3 mph, checking if car was stopped')
+        if msg.get('speed_mph', 0) > 3 or ((len(GetHandler.traccar_events) > 1) and (haversine(msg, GetHandler.traccar_events[-2]) > 0.02)):
+            print('speed > 3 mph or moved > 20m, checking if car was stopped')
             if GetHandler.traccar_state == 'STOPPED':
                 sent_map = False
                 if 'latitude' in msg and 'longitude' in msg:
