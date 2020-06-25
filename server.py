@@ -97,11 +97,11 @@ class GetHandler(BaseHTTPRequestHandler):
                     fn = fetch_static_map(msg['longitude'], msg['latitude'])
                     if fn:
                         with open(fn, 'rb') as f:
-                            client.send_message('car is moving', attachment=f)
+                            pushover_client.send_message('car is moving', attachment=f)
                             sent_map = True
 
                 if not sent_map:
-                    client.send_message('car is moving')
+                    pushover_client.send_message('car is moving')
 
                 GetHandler.traccar_state = 'MOVING'
         else:
@@ -122,11 +122,11 @@ class GetHandler(BaseHTTPRequestHandler):
                         fn = fetch_static_map(msg['longitude'], msg['latitude'])
                         if fn:
                             with open(fn, 'rb') as f:
-                                client.send_message('car is stopped', attachment=f)
+                                pushover_client.send_message('car is stopped', attachment=f)
                                 sent_map = True
 
                     if not sent_map:
-                        client.send_message('car is stopped')
+                        pushover_client.send_message('car is stopped')
 
                     GetHandler.traccar_state = 'STOPPED'
 
