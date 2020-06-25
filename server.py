@@ -32,7 +32,8 @@ def fetch_static_map(lon, lat):
 
         return filename
 
-    except:
+    except e:
+        print('ERROR: {}'.format(str(e)))
         return False
 
 def haversine(e1, e2):
