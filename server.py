@@ -28,11 +28,11 @@ def fetch_static_map(lon, lat):
                 continue
             t = float(os.path.basename(fn).replace('traccar-map-','').replace('.png',''))
             if (time.time() - t) > 15 * 60:
-                os.unlink(fn)
+                os.unlink('/tmp/{}'.format(fn))
 
         return filename
 
-    except e:
+    except Exception as e:
         print('ERROR: {}'.format(str(e)))
         return False
 
@@ -83,11 +83,13 @@ def decode_GET(qs):
 class GetHandler(BaseHTTPRequestHandler):
     traccar_events = []
     traccar_state = 'STOPPED'
+    traccar_last_start = None
 
     def do_GET(self):
         msg = decode_GET(self.path)
+        msg['time'] = time.time()
         GetHandler.traccar_events.append(msg)
-        if len(GetHandler.traccar_events) > 100:
+        if len(GetHandler.traccar_events) > 24 * 60 * 2:
             GetHandler.traccar_events.pop(0)
 
         if msg.get('speed_mph', 0) > 3 or ((len(GetHandler.traccar_events) > 1) and (haversine(msg, GetHandler.traccar_events[-2]) > 0.02)):
@@ -104,6 +106,7 @@ class GetHandler(BaseHTTPRequestHandler):
                 if not sent_map:
                     pushover_client.send_message('car is moving')
 
+                GetHandler.traccar_last_start = time.time()
                 GetHandler.traccar_state = 'MOVING'
         else:
             # get events from last 3m
@@ -129,6 +132,16 @@ class GetHandler(BaseHTTPRequestHandler):
                     if not sent_map:
                         pushover_client.send_message('car is stopped')
 
+                    if GetHandler.traccar_last_start is not None:
+                        feat = {'type': 'Feature', 'properties': {'time': []}, 'geometry': {'type': 'LineString', 'coordinates': []}}
+                        events = [e for e in GetHandler.traccar_events if e['time'] > GetHandler.traccar_last_start and e['time'] < time.time()]
+                        for e in events:
+                            feat['geometry']['coordinates'].append((e['longitude'], e['latitude']))
+                            feat['properties']['time'].append(int(e['time']))
+                        with open('trip-{}.geojson'.format(int(GetHandler.traccar_last_start)), 'w') as f:
+                            json.dump(feat, f)
+
+                    GetHandler.traccar_last_start = None
                     GetHandler.traccar_state = 'STOPPED'
 
         with open('GET.log', 'a') as f:
