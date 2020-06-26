@@ -147,7 +147,7 @@ class GetHandler(BaseHTTPRequestHandler):
                         try:
                             with open(fn, 'w') as f:
                                 s3.upload_fileobj(f, 'sbma44', 'traccar/trips/trip-{}.geojson'.format(int(GetHandler.traccar_last_start)))
-                        except: Exception as e:
+                        except Exception as e:
                             upload_success = False
                             print('ERROR: {}'.format(str(e)))
                         if upload_success:
