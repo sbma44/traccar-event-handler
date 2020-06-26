@@ -1,13 +1,14 @@
 from http.server import BaseHTTPRequestHandler
-import os
-import os.path
+import os, os.path
 import time
-import requests
-from urllib import parse
+import json
 from urllib.parse import unquote, urlparse, parse_qs
 from math import radians, cos, sin, asin, sqrt
-import json
+
+import requests
 from pushover import Client
+import boto3
+from botocore.exceptions import ClientError
 
 try:
     from local_settings import *
@@ -21,7 +22,7 @@ def fetch_static_map(lon, lat):
         filename = '/tmp/traccar-map-{}.png'.format(time.time())
         with open(filename, 'wb') as f:
             f.write(r.content)
-        
+
         # clean up old snaps
         for fn in os.listdir('/tmp'):
             if not 'traccar-map-' in fn:
@@ -38,7 +39,7 @@ def fetch_static_map(lon, lat):
 
 def haversine(e1, e2):
     """
-    Calculate the great circle distance between two points 
+    Calculate the great circle distance between two points
     on the earth (specified in decimal degrees)
     """
     lon1 = float(e1.get('longitude'))
@@ -46,18 +47,19 @@ def haversine(e1, e2):
     lon2 = float(e2.get('longitude'))
     lat2 = float(e2.get('latitude'))
 
-    # convert decimal degrees to radians 
+    # convert decimal degrees to radians
     lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
 
-    # haversine formula 
-    dlon = lon2 - lon1 
-    dlat = lat2 - lat1 
+    # haversine formula
+    dlon = lon2 - lon1
+    dlat = lat2 - lat1
     a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
-    c = 2 * asin(sqrt(a)) 
+    c = 2 * asin(sqrt(a))
     r = 6371 # Radius of earth in kilometers. Use 3956 for miles
     return c * r
 
 pushover_client = Client(PUSHOVER_USER, api_token=PUSHOVER_TOKEN)
+s3_client = boto3.client('s3', region_name=AWS_DEFAULT_REGION, aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
 
 fn = fetch_static_map(-77.0366, 38.8976)
 if fn:
@@ -136,10 +138,20 @@ class GetHandler(BaseHTTPRequestHandler):
                         feat = {'type': 'Feature', 'properties': {'time': []}, 'geometry': {'type': 'LineString', 'coordinates': []}}
                         events = [e for e in GetHandler.traccar_events if e['time'] > GetHandler.traccar_last_start and e['time'] < time.time()]
                         for e in events:
-                            feat['geometry']['coordinates'].append((e['longitude'], e['latitude']))
+                            feat['geometry']['coordinates'].append((float(e['longitude']), float(e['latitude'])))
                             feat['properties']['time'].append(int(e['time']))
-                        with open('trip-{}.geojson'.format(int(GetHandler.traccar_last_start)), 'w') as f:
+                        fn = '/tmp/trip-{}.geojson'.format(int(GetHandler.traccar_last_start))
+                        with open(fn, 'w') as f:
                             json.dump(feat, f)
+                        upload_success = True
+                        try:
+                            with open(fn, 'w') as f:
+                                s3.upload_fileobj(f, 'sbma44', 'traccar/trips/trip-{}.geojson'.format(int(GetHandler.traccar_last_start)))
+                        except: Exception as e:
+                            upload_success = False
+                            print('ERROR: {}'.format(str(e)))
+                        if upload_success:
+                            os.unlink(fn)
 
                     GetHandler.traccar_last_start = None
                     GetHandler.traccar_state = 'STOPPED'
@@ -174,4 +186,3 @@ if __name__ == '__main__':
     server = HTTPServer(('0.0.0.0', 3080), GetHandler)
     print('Starting server, use <Ctrl-C> to stop')
     server.serve_forever()
-

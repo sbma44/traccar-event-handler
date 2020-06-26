@@ -1,0 +1,5 @@
+python-pushover==0.4
+requests==2.24.0
+troposphere==2.6.1
+boto3==1.14.11
+botocore==1.17.11
