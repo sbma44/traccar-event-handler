@@ -135,7 +135,7 @@ class GetHandler(BaseHTTPRequestHandler):
                         pushover_client.send_message('car is stopped')
 
                     if GetHandler.traccar_last_start is not None:
-                        feat = {'type': 'Feature', 'properties': {'time': []}, 'geometry': {'type': 'LineString', 'coordinates': []}}
+                        feat = {'type': 'Feature', 'properties': {'stroke': 'blue', 'stroke-width': 5, 'time': []}, 'geometry': {'type': 'LineString', 'coordinates': []}}
                         events = [e for e in GetHandler.traccar_events if e['time'] > GetHandler.traccar_last_start and e['time'] < time.time()]
                         for e in events:
                             feat['geometry']['coordinates'].append((float(e['longitude']), float(e['latitude'])))
@@ -146,7 +146,7 @@ class GetHandler(BaseHTTPRequestHandler):
                         upload_success = True
                         try:
                             with open(fn, 'rb') as f:
-                                s3.upload_fileobj(f, S3_BUCKET, '{}{}'.format(S3_PATH, os.path.basename(fn)))
+                                s3_client.upload_fileobj(f, S3_BUCKET, '{}{}'.format(S3_PATH, os.path.basename(fn)))
                         except Exception as e:
                             upload_success = False
                             print('ERROR: {}'.format(str(e)))
