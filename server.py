@@ -145,8 +145,8 @@ class GetHandler(BaseHTTPRequestHandler):
                             json.dump(feat, f)
                         upload_success = True
                         try:
-                            with open(fn, 'w') as f:
-                                s3.upload_fileobj(f, 'sbma44', 'traccar/trips/trip-{}.geojson'.format(int(GetHandler.traccar_last_start)))
+                            with open(fn, 'rb') as f:
+                                s3.upload_fileobj(f, S3_BUCKET, '{}{}'.format(S3_PATH, os.path.basename(fn)))
                         except Exception as e:
                             upload_success = False
                             print('ERROR: {}'.format(str(e)))
@@ -156,7 +156,7 @@ class GetHandler(BaseHTTPRequestHandler):
                     GetHandler.traccar_last_start = None
                     GetHandler.traccar_state = 'STOPPED'
 
-        with open('GET.log', 'a') as f:
+        with open('/home/pi/traccar-event-handler/GET.log', 'a') as f:
             f.write(str(time.time()) + ',' + json.dumps(msg) + '\n')
 
         self.send_response(200)
@@ -172,8 +172,8 @@ class GetHandler(BaseHTTPRequestHandler):
         event_type = msg.get('event', {}).get('type')
         if not event_type in ('deviceOnline', 'deviceOffline'):
             pushover_client.send_message('traccar event: {}'.format(event_type))
-            with open('POST_{}_'.format(event_type) + str(time.time()) + '.txt', 'w') as f:
-                f.write(body.decode('utf-8'))
+            #with open('POST_{}_'.format(event_type) + str(time.time()) + '.txt', 'w') as f:
+            #    f.write(body.decode('utf-8'))
 
         self.send_response(200)
         self.send_header("Content-Type", "text/ascii")

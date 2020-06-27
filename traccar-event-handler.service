@@ -1,0 +1,11 @@
+[Unit]
+Description=Traccar event handler
+
+[Service]
+Restart=on-failure
+RestartSec=30
+Type=simple
+ExecStart=/home/pi/traccar-event-handler/.venv/bin/python3 /home/pi/traccar-event-handler/server.py
+
+[Install]
+WantedBy=multi-user.target
