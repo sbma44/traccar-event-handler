@@ -148,12 +148,13 @@ class GetHandler(BaseHTTPRequestHandler):
 
                     duration = False
                     if GetHandler.traccar_last_start is not None:
-                        feat = {'type': 'Feature', 'properties': {'time': []}, 'geometry': {'type': 'LineString', 'coordinates': []}}
+                        feat = {'type': 'Feature', 'properties': {'stroke': 'blue', 'stroke-width': 5, 'time': []}, 'geometry': {'type': 'LineString', 'coordinates': []}}
                         duration = floor((time.time() - GetHandler.traccar_last_start) / 60)
                         if duration > 60:
                             duration = '(driving {}h{}m)'.format(floor(duration / 60), duration % 60)
                         else:
                             duration = '(driving {}m)'.format(duration)
+
                         events = [e for e in GetHandler.traccar_events if e['time'] > GetHandler.traccar_last_start and e['time'] < time.time()]
                         for e in events:
                             feat['geometry']['coordinates'].append((float(e['longitude']), float(e['latitude'])))
@@ -163,9 +164,9 @@ class GetHandler(BaseHTTPRequestHandler):
                             json.dump(feat, f)
                         upload_success = True
                         try:
-                            with open(fn, 'w') as f:
-                                s3.upload_fileobj(f, 'sbma44', 'traccar/trips/trip-{}.geojson'.format(int(GetHandler.traccar_last_start)))
-                        except: Exception as e:
+                            with open(fn, 'rb') as f:
+                                s3_client.upload_fileobj(f, S3_BUCKET, '{}{}'.format(S3_PATH, os.path.basename(fn)))
+                        except Exception as e:
                             upload_success = False
                             print('ERROR: {}'.format(str(e)))
                         if upload_success:
@@ -190,7 +191,7 @@ class GetHandler(BaseHTTPRequestHandler):
                     GetHandler.traccar_last_start = None
                     GetHandler.traccar_state = 'STOPPED'
 
-        with open('GET.log', 'a') as f:
+        with open('/home/pi/traccar-event-handler/GET.log', 'a') as f:
             f.write(str(time.time()) + ',' + json.dumps(msg) + '\n')
 
         self.send_response(200)
@@ -206,8 +207,8 @@ class GetHandler(BaseHTTPRequestHandler):
         event_type = msg.get('event', {}).get('type')
         if not event_type in ('deviceOnline', 'deviceOffline'):
             pushover_client.send_message('traccar event: {}'.format(event_type))
-            with open('POST_{}_'.format(event_type) + str(time.time()) + '.txt', 'w') as f:
-                f.write(body.decode('utf-8'))
+            #with open('POST_{}_'.format(event_type) + str(time.time()) + '.txt', 'w') as f:
+            #    f.write(body.decode('utf-8'))
 
         self.send_response(200)
         self.send_header("Content-Type", "text/ascii")
