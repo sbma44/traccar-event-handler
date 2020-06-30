@@ -3,12 +3,13 @@ import os, os.path
 import time
 import json
 from urllib.parse import unquote, urlparse, parse_qs
-from math import radians, cos, sin, asin, sqrt
+from math import radians, cos, sin, asin, sqrt, floor
 
 import requests
 from pushover import Client
 import boto3
 from botocore.exceptions import ClientError
+import paho.mqtt.client as mqtt
 
 try:
     from local_settings import *
@@ -87,6 +88,21 @@ class GetHandler(BaseHTTPRequestHandler):
     traccar_state = 'STOPPED'
     traccar_last_start = None
 
+    # @staticmethod
+    # def mqtt_on_connect:
+    #     pass
+
+    # @staticmethod
+    # def mqtt_on_message:
+    #     pass
+
+    mqtt_client = mqtt.Client()
+    # mqtt_client.on_connect = GetHandler.mqtt_on_connect
+    # mqtt_client.on_message = GetHandler.mqtt_on_message
+
+    mqtt_client.connect(MQTT_SERVER, MQTT_PORT, 60)
+    mqtt_client.loop_start()
+
     def do_GET(self):
         msg = decode_GET(self.path)
         msg['time'] = time.time()
@@ -108,6 +124,8 @@ class GetHandler(BaseHTTPRequestHandler):
                 if not sent_map:
                     pushover_client.send_message('car is moving')
 
+                mqtt_client.publish(MQTT_TOPIC + 'moving', 1, retain=True)
+
                 GetHandler.traccar_last_start = time.time()
                 GetHandler.traccar_state = 'MOVING'
         else:
@@ -123,19 +141,19 @@ class GetHandler(BaseHTTPRequestHandler):
             print('speed < 3 mph, checking if car has been still -- looks like it moved {} km over {} events'.format(max_distance, len(eligible_events)))
             if max_distance <= 0.005: # 5 meters
                 if GetHandler.traccar_state == 'MOVING':
-                    sent_map = False
-                    if 'latitude' in msg and 'longitude' in msg:
-                        fn = fetch_static_map(msg['longitude'], msg['latitude'])
-                        if fn:
-                            with open(fn, 'rb') as f:
-                                pushover_client.send_message('car is stopped', attachment=f)
-                                sent_map = True
+                    geocode = False
+                    geocode_req = requests.get('https://api.mapbox.com/geocoding/v5/mapbox.places/{},{}.json?access_token={}&types=address'.format(msg['longitude'], msg['latitude'], MAPBOX_ACCESS_TOKEN), allow_redirects=True)
+                    if geocode_req.status_code == requests.codes.ok:
+                        geocode = 'at {}'.format(json.loads(geocode_req.text)['features'][0]['place_name'].replace(', Washington, District of Columbia 20002, United States', '').replace(', United States', '').replace('District of Columbia', 'DC'))
 
-                    if not sent_map:
-                        pushover_client.send_message('car is stopped')
-
+                    duration = False
                     if GetHandler.traccar_last_start is not None:
                         feat = {'type': 'Feature', 'properties': {'time': []}, 'geometry': {'type': 'LineString', 'coordinates': []}}
+                        duration = floor((time.time() - GetHandler.traccar_last_start) / 60)
+                        if duration > 60:
+                            duration = '(driving {}h{}m)'.format(floor(duration / 60), duration % 60)
+                        else:
+                            duration = '(driving {}m)'.format(duration)
                         events = [e for e in GetHandler.traccar_events if e['time'] > GetHandler.traccar_last_start and e['time'] < time.time()]
                         for e in events:
                             feat['geometry']['coordinates'].append((float(e['longitude']), float(e['latitude'])))
@@ -152,6 +170,22 @@ class GetHandler(BaseHTTPRequestHandler):
                             print('ERROR: {}'.format(str(e)))
                         if upload_success:
                             os.unlink(fn)
+
+                    pushover_msg = ['stopped', geocode, duration]
+                    pushover_msg = ' '.join([x for x in pushover_msg if x])
+
+                    sent_map = False
+                    if 'latitude' in msg and 'longitude' in msg:
+                        fn = fetch_static_map(msg['longitude'], msg['latitude'])
+                        if fn:
+                            with open(fn, 'rb') as f:
+                                pushover_client.send_message(pushover_msg, attachment=f)
+                                sent_map = True
+
+                    if not sent_map:
+                        pushover_client.send_message(pushover_msg)
+
+                    mqtt_client.publish(MQTT_TOPIC + 'moving', 0, retain=True)
 
                     GetHandler.traccar_last_start = None
                     GetHandler.traccar_state = 'STOPPED'
