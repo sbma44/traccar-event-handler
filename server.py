@@ -18,7 +18,7 @@ except:
 
 def fetch_static_map(lon, lat):
     try:
-        url = 'https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/{},{},16,0/300x300?access_token={}'.format(lon, lat, MAPBOX_ACCESS_TOKEN)
+        url = 'https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-l-car+aa0000({},{})/{},{},16,0/300x300@2x?access_token={}'.format(lon, lat, lon, lat, MAPBOX_ACCESS_TOKEN)
         r = requests.get(url, allow_redirects=True)
         filename = '/tmp/traccar-map-{}.png'.format(time.time())
         with open(filename, 'wb') as f:
