@@ -50,16 +50,6 @@ def haversine(e1, e2):
     r = 6371 # Radius of earth in kilometers. Use 3956 for miles
     return c * r
 
-pushover_client = Client(PUSHOVER_USER, api_token=PUSHOVER_TOKEN)
-s3_client = boto3.client('s3', region_name=AWS_DEFAULT_REGION, aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
-
-fn = fetch_static_map(-77.0366, 38.8976)
-if fn:
-    with open(fn, 'rb') as f:
-        pushover_client.send_message('traccar event handler started', attachment=f)
-else:
-    pushover_client.send_message('traccar event handler started (maps not working)')
-
 def decode_GET(qs):
     d = parse_qs(qs)
     new_d = {}
@@ -74,6 +64,10 @@ def decode_GET(qs):
         del new_d['speed']
     return new_d
 
+pushover_client = None
+s3_client = None
+mqtt_client = None
+
 class GetHandler(BaseHTTPRequestHandler):
     traccar_events = []
     traccar_state = 'STOPPED'
@@ -87,12 +81,8 @@ class GetHandler(BaseHTTPRequestHandler):
     # def mqtt_on_message:
     #     pass
 
-    mqtt_client = mqtt.Client()
     # mqtt_client.on_connect = GetHandler.mqtt_on_connect
     # mqtt_client.on_message = GetHandler.mqtt_on_message
-
-    mqtt_client.connect(MQTT_SERVER, MQTT_PORT, 60)
-    mqtt_client.loop_start()
 
     def do_GET(self):
         msg = decode_GET(self.path)
@@ -123,13 +113,14 @@ class GetHandler(BaseHTTPRequestHandler):
             eligible_events = [e for e in GetHandler.traccar_events if (time.time() - float(e.get('deviceTime', 0))/1000) < 180]
 
             # find max distance traveled during this period
-            last_event = eligible_events[-1]
             max_distance = 0
-            for e in eligible_events:
-                max_distance = max(max_distance, haversine(last_event, e))
+            if len(eligible_events) > 0:
+                last_event = eligible_events[-1]
+                for e in eligible_events:
+                    max_distance = max(max_distance, haversine(last_event, e))
 
             print('speed < 3 mph, checking if car has been still -- looks like it moved {} km over {} events'.format(max_distance, len(eligible_events)))
-            if max_distance <= 0.005: # 5 meters
+            if len(eligible_events) > 0 and max_distance <= 0.005: # 5 meters
                 if GetHandler.traccar_state == 'MOVING':
                     geocode = False
                     geocode_req = requests.get('https://api.mapbox.com/geocoding/v5/mapbox.places/{},{}.json?access_token={}&types=address'.format(msg['longitude'], msg['latitude'], MAPBOX_ACCESS_TOKEN), allow_redirects=True)
@@ -180,9 +171,6 @@ class GetHandler(BaseHTTPRequestHandler):
                     GetHandler.traccar_last_start = None
                     GetHandler.traccar_state = 'STOPPED'
 
-        with open('/home/pi/traccar-event-handler/GET.log', 'a') as f:
-            f.write(str(time.time()) + ',' + json.dumps(msg) + '\n')
-
         self.send_response(200)
         self.send_header("Content-Type", "text/ascii")
         self.send_header("Content-Length", "2")
@@ -206,6 +194,18 @@ class GetHandler(BaseHTTPRequestHandler):
         self.wfile.write("OK".encode("utf-8"))
 
 if __name__ == '__main__':
+    pushover_client = Client(PUSHOVER_USER, api_token=PUSHOVER_TOKEN)
+    s3_client = boto3.client('s3', region_name=AWS_DEFAULT_REGION, aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
+    mqtt_client = mqtt.Client()
+    mqtt_client.connect(MQTT_SERVER, MQTT_PORT, 60)
+    mqtt_client.loop_start()
+
+    fn = fetch_static_map(-77.0366, 38.8976)
+    if fn:
+        pushover_client.send_message('traccar event handler started', attachment=fn)
+    else:
+        pushover_client.send_message('traccar event handler started (maps not working)')
+
     from http.server import HTTPServer
     server = HTTPServer(('0.0.0.0', 3080), GetHandler)
     print('Starting server, use <Ctrl-C> to stop')
