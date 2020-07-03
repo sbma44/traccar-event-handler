@@ -18,7 +18,7 @@ except:
 
 def fetch_static_map(lon, lat):
     try:
-        url = 'https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/{},{},16,0/300x300?access_token={}'.format(lon, lat, MAPBOX_ACCESS_TOKEN)
+        url = 'https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-l-car+aa0000({},{})/{},{},16,0/300x300@2x?access_token={}'.format(lon, lat, lon, lat, MAPBOX_ACCESS_TOKEN)
         r = requests.get(url, allow_redirects=True)
         filename = '/tmp/traccar-map-{}.png'.format(time.time())
         with open(filename, 'wb') as f:
@@ -124,7 +124,7 @@ class GetHandler(BaseHTTPRequestHandler):
                 if not sent_map:
                     pushover_client.send_message('car is moving')
 
-                mqtt_client.publish(MQTT_TOPIC + 'moving', 1, retain=True)
+                GetHandler.mqtt_client.publish(MQTT_TOPIC + 'moving', 0, retain=True)
 
                 GetHandler.traccar_last_start = time.time()
                 GetHandler.traccar_state = 'MOVING'
@@ -186,7 +186,7 @@ class GetHandler(BaseHTTPRequestHandler):
                     if not sent_map:
                         pushover_client.send_message(pushover_msg)
 
-                    mqtt_client.publish(MQTT_TOPIC + 'moving', 0, retain=True)
+                    GetHandler.mqtt_client.publish(MQTT_TOPIC + 'moving', 1, retain=True)
 
                     GetHandler.traccar_last_start = None
                     GetHandler.traccar_state = 'STOPPED'
