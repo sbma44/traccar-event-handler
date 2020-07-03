@@ -20,19 +20,10 @@ def fetch_static_map(lon, lat):
     try:
         url = 'https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-l-car+aa0000({},{})/{},{},16,0/300x300@2x?access_token={}'.format(lon, lat, lon, lat, MAPBOX_ACCESS_TOKEN)
         r = requests.get(url, allow_redirects=True)
-        filename = '/tmp/traccar-map-{}.png'.format(time.time())
-        with open(filename, 'wb') as f:
-            f.write(r.content)
-
-        # clean up old snaps
-        for fn in os.listdir('/tmp'):
-            if not 'traccar-map-' in fn:
-                continue
-            t = float(os.path.basename(fn).replace('traccar-map-','').replace('.png',''))
-            if (time.time() - t) > 15 * 60:
-                os.unlink('/tmp/{}'.format(fn))
-
-        return filename
+        if r.status_code == requests.codes.ok:
+            return r.content
+        else:
+            return False
 
     except Exception as e:
         print('ERROR: {}'.format(str(e)))
@@ -117,9 +108,8 @@ class GetHandler(BaseHTTPRequestHandler):
                 if 'latitude' in msg and 'longitude' in msg:
                     fn = fetch_static_map(msg['longitude'], msg['latitude'])
                     if fn:
-                        with open(fn, 'rb') as f:
-                            pushover_client.send_message('car is moving', attachment=f)
-                            sent_map = True
+                        pushover_client.send_message('car is moving', attachment=fn)
+                        sent_map = True
 
                 if not sent_map:
                     pushover_client.send_message('car is moving')
@@ -179,9 +169,8 @@ class GetHandler(BaseHTTPRequestHandler):
                     if 'latitude' in msg and 'longitude' in msg:
                         fn = fetch_static_map(msg['longitude'], msg['latitude'])
                         if fn:
-                            with open(fn, 'rb') as f:
-                                pushover_client.send_message(pushover_msg, attachment=f)
-                                sent_map = True
+                            pushover_client.send_message(pushover_msg, attachment=fn)
+                            sent_map = True
 
                     if not sent_map:
                         pushover_client.send_message(pushover_msg)
