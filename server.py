@@ -104,7 +104,7 @@ class GetHandler(BaseHTTPRequestHandler):
                 if not sent_map:
                     pushover_client.send_message('car is moving')
 
-                GetHandler.mqtt_client.publish(MQTT_TOPIC + 'moving', 0, retain=True)
+                mqtt_client.publish(MQTT_TOPIC + 'moving', 0, retain=True)
 
                 GetHandler.traccar_last_start = time.time()
                 GetHandler.traccar_state = 'MOVING'
@@ -166,7 +166,7 @@ class GetHandler(BaseHTTPRequestHandler):
                     if not sent_map:
                         pushover_client.send_message(pushover_msg)
 
-                    GetHandler.mqtt_client.publish(MQTT_TOPIC + 'moving', 1, retain=True)
+                    mqtt_client.publish(MQTT_TOPIC + 'moving', 1, retain=True)
 
                     GetHandler.traccar_last_start = None
                     GetHandler.traccar_state = 'STOPPED'
