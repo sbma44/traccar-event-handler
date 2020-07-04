@@ -1,0 +1,11 @@
+[
+  [
+    [
+      "traccar/moving",
+      0
+    ],
+    {
+      "retain": true
+    }
+  ]
+]
