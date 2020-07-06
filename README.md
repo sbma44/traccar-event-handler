@@ -8,7 +8,7 @@ But I didn't need most of that. I just wanted a replacement for my discontinued 
 
 This project is a simple answer to that problem. It takes advantage of Traccar's forwarding capabilities: Traccar remains responsible for receiving and decoding GPS events from your hardware, but then forwards activity to this script, which runs a modest local webserver to interpret those events and take action.
 
-Note that I have not bothered with some obvious functionality--for instance, an MQTT server is expected; this function can't be disabled. Making it optional would be easy! [Open an issue](https://github.com/sbma44/traccar-event-handler/issues/new/choose) if you need that or something else.
+Note that I have not bothered with some obvious functionality--for instance, an MQTT server is expected; this function can't be disabled. Even more glaringly, only a single vehicle is currently supported! [Open an issue](https://github.com/sbma44/traccar-event-handler/issues/new/choose) if you need that or something else.
 
 # Features
 - Detect start and stop events based on motion (my adapter doesn't recognize ignition events)
