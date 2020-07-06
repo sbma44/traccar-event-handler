@@ -1,6 +1,9 @@
 import sys
 import server
-from local_settings import *
+try:
+    from local_settings import *
+except:
+    pass
 from io import BytesIO as IO
 import json
 import gzip
