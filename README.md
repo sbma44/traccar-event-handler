@@ -27,12 +27,12 @@ To get this script running automatically at boot on a modern Linux system, you w
 Note that the service file uses a python executable in a venv tree. Be sure to edit this to reflect your own venv location.
 
 # Configuration
-Please have a look at `local_settings.py.example`--remove the `.example` suffix and fill out with your API keys.
+Please have a look at `local_settings.py.example`. Remove the `.example` suffix and fill out with your API keys.
 
 # Tests
 There are some tests! Specifically, there is a day's worth of logs that is replayed against the script with stubs for the external API calls. The arguments received in calls to these stubs are checked against fixture files.
 
-Please note that I use a Sinotrack ST-902 adapter with default settings (aside from my Traccar server endpoint, of course). I have not tested this code with any others, but expect the HTTP GETs emitted by Traccar to be similar enough to work.
+I use a Sinotrack ST-902 adapter with default settings (aside from my Traccar server endpoint, of course). I have not tested this code with any hardware, but expect the HTTP GETs emitted by Traccar to be similar enough to work.
 
 The API calling code is not tested to avoid network requests or the need to include credentials in the test runner.
 
