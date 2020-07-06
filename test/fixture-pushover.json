@@ -6,5 +6,125 @@
     {
       "attachment": "<class '_io.BufferedReader'>"
     }
+  ],
+  [
+    [
+      "stopped at 100 Fake Street (driving 10m)"
+    ],
+    {
+      "attachment": "<class '_io.BufferedReader'>"
+    }
+  ],
+  [
+    [
+      "car is moving"
+    ],
+    {
+      "attachment": "<class '_io.BufferedReader'>"
+    }
+  ],
+  [
+    [
+      "stopped at 100 Fake Street (driving 1h5m)"
+    ],
+    {
+      "attachment": "<class '_io.BufferedReader'>"
+    }
+  ],
+  [
+    [
+      "car is moving"
+    ],
+    {
+      "attachment": "<class '_io.BufferedReader'>"
+    }
+  ],
+  [
+    [
+      "stopped at 100 Fake Street (driving 38m)"
+    ],
+    {
+      "attachment": "<class '_io.BufferedReader'>"
+    }
+  ],
+  [
+    [
+      "car is moving"
+    ],
+    {
+      "attachment": "<class '_io.BufferedReader'>"
+    }
+  ],
+  [
+    [
+      "stopped at 100 Fake Street (driving 12m)"
+    ],
+    {
+      "attachment": "<class '_io.BufferedReader'>"
+    }
+  ],
+  [
+    [
+      "car is moving"
+    ],
+    {
+      "attachment": "<class '_io.BufferedReader'>"
+    }
+  ],
+  [
+    [
+      "stopped at 100 Fake Street (driving 19m)"
+    ],
+    {
+      "attachment": "<class '_io.BufferedReader'>"
+    }
+  ],
+  [
+    [
+      "car is moving"
+    ],
+    {
+      "attachment": "<class '_io.BufferedReader'>"
+    }
+  ],
+  [
+    [
+      "stopped at 100 Fake Street (driving 1h15m)"
+    ],
+    {
+      "attachment": "<class '_io.BufferedReader'>"
+    }
+  ],
+  [
+    [
+      "car is moving"
+    ],
+    {
+      "attachment": "<class '_io.BufferedReader'>"
+    }
+  ],
+  [
+    [
+      "stopped at 100 Fake Street (driving 27m)"
+    ],
+    {
+      "attachment": "<class '_io.BufferedReader'>"
+    }
+  ],
+  [
+    [
+      "car is moving"
+    ],
+    {
+      "attachment": "<class '_io.BufferedReader'>"
+    }
+  ],
+  [
+    [
+      "stopped at 100 Fake Street (driving 5m)"
+    ],
+    {
+      "attachment": "<class '_io.BufferedReader'>"
+    }
   ]
 ]

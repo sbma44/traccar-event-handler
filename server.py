@@ -1,6 +1,7 @@
 from http.server import BaseHTTPRequestHandler
 import os, os.path
 import time
+import io
 import json
 from urllib.parse import unquote, urlparse, parse_qs
 from math import radians, cos, sin, asin, sqrt, floor
@@ -28,6 +29,12 @@ def fetch_static_map(lon, lat):
     except Exception as e:
         print('ERROR: {}'.format(str(e)))
         return False
+
+def fetch_geocode(lon, lat):
+    geocode_req = requests.get('https://api.mapbox.com/geocoding/v5/mapbox.places/{},{}.json?access_token={}&types=address'.format(lon, lat, MAPBOX_ACCESS_TOKEN), allow_redirects=True)
+    if geocode_req.status_code != requests.codes.ok:
+        return False
+    return 'at {}'.format(json.loads(geocode_req.text)['features'][0]['place_name'].replace(', Washington, District of Columbia 20002, United States', '').replace(', United States', '').replace('District of Columbia', 'DC'))
 
 def haversine(e1, e2):
     """
@@ -122,10 +129,7 @@ class GetHandler(BaseHTTPRequestHandler):
             print('speed < 3 mph, checking if car has been still -- looks like it moved {} km over {} events'.format(max_distance, len(eligible_events)))
             if len(eligible_events) > 0 and max_distance <= 0.005: # 5 meters
                 if GetHandler.traccar_state == 'MOVING':
-                    geocode = False
-                    geocode_req = requests.get('https://api.mapbox.com/geocoding/v5/mapbox.places/{},{}.json?access_token={}&types=address'.format(msg['longitude'], msg['latitude'], MAPBOX_ACCESS_TOKEN), allow_redirects=True)
-                    if geocode_req.status_code == requests.codes.ok:
-                        geocode = 'at {}'.format(json.loads(geocode_req.text)['features'][0]['place_name'].replace(', Washington, District of Columbia 20002, United States', '').replace(', United States', '').replace('District of Columbia', 'DC'))
+                    geocode = fetch_geocode(msg['longitude'], msg['latitude'])
 
                     duration = False
                     if GetHandler.traccar_last_start is not None:
@@ -140,18 +144,15 @@ class GetHandler(BaseHTTPRequestHandler):
                         for e in events:
                             feat['geometry']['coordinates'].append((float(e['longitude']), float(e['latitude'])))
                             feat['properties']['time'].append(int(e['time']))
-                        fn = '/tmp/trip-{}.geojson'.format(int(GetHandler.traccar_last_start))
-                        with open(fn, 'w') as f:
-                            json.dump(feat, f)
-                        upload_success = True
+                        trip_io = io.BytesIO()
+                        trip_io.write(str.encode(json.dumps(feat)))
+                        trip_io.flush()
+                        trip_io.seek(0)
                         try:
-                            with open(fn, 'rb') as f:
-                                s3_client.upload_fileobj(f, S3_BUCKET, '{}{}'.format(S3_PATH, os.path.basename(fn)))
+                            s3_client.upload_fileobj(trip_io, S3_BUCKET, '{}{}'.format(S3_PATH, 'trip-{}.geojson'.format(int(GetHandler.traccar_last_start))))
+                            trip_io.close()
                         except Exception as e:
-                            upload_success = False
                             print('ERROR: {}'.format(str(e)))
-                        if upload_success:
-                            os.unlink(fn)
 
                     pushover_msg = ['stopped', geocode, duration]
                     pushover_msg = ' '.join([x for x in pushover_msg if x])

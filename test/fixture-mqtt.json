@@ -7,5 +7,140 @@
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/moving",
+      1
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      0
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      1
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      0
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      1
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      0
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      1
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      0
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      1
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      0
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      1
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      0
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      1
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      0
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      1
+    ],
+    {
+      "retain": true
+    }
   ]
 ]
