@@ -91,6 +91,11 @@ class MockRequest(object):
             pass
 
 def test_get_handler():
+    with open('local_settings.py.example') as f:
+        for line in f:
+            parts = line.split('=')
+            setattr(server, parts[0], parts[1].replace('\'', ''))
+
     server.pushover_client = FixtureChecker('pushover', 'send_message')
     server.mqtt_client = FixtureChecker('mqtt', 'publish')
     server.s3_client = FixtureChecker('s3', 'upload_fileobj')
