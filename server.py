@@ -12,6 +12,10 @@ import boto3
 from botocore.exceptions import ClientError
 import paho.mqtt.client as mqtt
 
+ETA_HOME_LOCATION = False
+ETA_CHECK_INTERVAL = 59
+EVENT_BUFFER_SIZE = 24 * 60 * 2
+
 try:
     from local_settings import *
 except:
@@ -35,6 +39,15 @@ def fetch_geocode(lon, lat):
     if geocode_req.status_code != requests.codes.ok:
         return False
     return 'at {}'.format(json.loads(geocode_req.text)['features'][0]['place_name'].replace(', Washington, District of Columbia 20002, United States', '').replace(', United States', '').replace('District of Columbia', 'DC'))
+
+def fetch_eta(start, end):
+    eta_req = requests.get('https://api.mapbox.com/directions/v5/mapbox/driving-traffic/{};{}?access_token={}'.format(','.join([str(x) for x in start]), ','.join([str(x) for x in end]), MAPBOX_ACCESS_TOKEN))
+    if eta_req.status_code != requests.codes.ok:
+        return False
+    feat = json.loads(eta_req.content)
+    if len(feat.get('routes', [])) and 'duration' in feat['routes'][0]:
+        return floor(feat['routes'][0].get('duration', 0) / 60)
+    return False
 
 def haversine(e1, e2):
     """
@@ -79,23 +92,13 @@ class GetHandler(BaseHTTPRequestHandler):
     traccar_events = []
     traccar_state = 'STOPPED'
     traccar_last_start = None
-
-    # @staticmethod
-    # def mqtt_on_connect:
-    #     pass
-
-    # @staticmethod
-    # def mqtt_on_message:
-    #     pass
-
-    # mqtt_client.on_connect = GetHandler.mqtt_on_connect
-    # mqtt_client.on_message = GetHandler.mqtt_on_message
+    traccar_last_eta_request = 0
 
     def do_GET(self):
         msg = decode_GET(self.path)
         msg['time'] = time.time()
         GetHandler.traccar_events.append(msg)
-        if len(GetHandler.traccar_events) > 24 * 60 * 2:
+        if len(GetHandler.traccar_events) > EVENT_BUFFER_SIZE:
             GetHandler.traccar_events.pop(0)
 
         if msg.get('speed_mph', 0) > 3 or ((len(GetHandler.traccar_events) > 1) and (haversine(msg, GetHandler.traccar_events[-2]) > 0.02)):
@@ -115,6 +118,13 @@ class GetHandler(BaseHTTPRequestHandler):
 
                 GetHandler.traccar_last_start = time.time()
                 GetHandler.traccar_state = 'MOVING'
+
+            if ETA_HOME_LOCATION and time.time() - GetHandler.traccar_last_eta_request > ETA_CHECK_INTERVAL:
+                eta = fetch_eta((msg['longitude'], msg['latitude']), ETA_HOME_LOCATION)
+                if eta:
+                    mqtt_client.publish(MQTT_TOPIC + 'eta', eta, retain=True)
+                GetHandler.traccar_last_eta_request = time.time()
+
         else:
             # get events from last 3m
             eligible_events = [e for e in GetHandler.traccar_events if (time.time() - float(e.get('deviceTime', 0))/1000) < 180]
@@ -185,8 +195,6 @@ class GetHandler(BaseHTTPRequestHandler):
         event_type = msg.get('event', {}).get('type')
         if not event_type in ('deviceOnline', 'deviceOffline'):
             pushover_client.send_message('traccar event: {}'.format(event_type))
-            #with open('POST_{}_'.format(event_type) + str(time.time()) + '.txt', 'w') as f:
-            #    f.write(body.decode('utf-8'))
 
         self.send_response(200)
         self.send_header("Content-Type", "text/ascii")

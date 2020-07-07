@@ -10,8 +10,8 @@
   ],
   [
     [
-      "traccar/moving",
-      1
+      "traccar/eta",
+      2
     ],
     {
       "retain": true
@@ -19,8 +19,8 @@
   ],
   [
     [
-      "traccar/moving",
-      0
+      "traccar/eta",
+      2
     ],
     {
       "retain": true
@@ -28,8 +28,8 @@
   ],
   [
     [
-      "traccar/moving",
-      1
+      "traccar/eta",
+      2
     ],
     {
       "retain": true
@@ -37,8 +37,8 @@
   ],
   [
     [
-      "traccar/moving",
-      0
+      "traccar/eta",
+      2
     ],
     {
       "retain": true
@@ -46,8 +46,8 @@
   ],
   [
     [
-      "traccar/moving",
-      1
+      "traccar/eta",
+      2
     ],
     {
       "retain": true
@@ -55,8 +55,8 @@
   ],
   [
     [
-      "traccar/moving",
-      0
+      "traccar/eta",
+      2
     ],
     {
       "retain": true
@@ -64,17 +64,8 @@
   ],
   [
     [
-      "traccar/moving",
-      1
-    ],
-    {
-      "retain": true
-    }
-  ],
-  [
-    [
-      "traccar/moving",
-      0
+      "traccar/eta",
+      2
     ],
     {
       "retain": true
@@ -100,6 +91,456 @@
   ],
   [
     [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      3
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      3
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      3
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      3
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      3
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      3
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      3
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      5
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      5
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      5
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      5
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      5
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      5
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      5
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
       "traccar/moving",
       1
     ],
@@ -118,6 +559,258 @@
   ],
   [
     [
+      "traccar/eta",
+      5
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      5
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      5
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      5
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      6
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      6
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      6
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      6
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      6
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      6
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      7
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      7
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      7
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      7
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      7
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      8
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      8
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      8
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      8
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      8
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      8
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
       "traccar/moving",
       1
     ],
@@ -129,6 +822,906 @@
     [
       "traccar/moving",
       0
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      1
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      0
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      8
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      8
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      8
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      8
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      8
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      8
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      8
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      7
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      7
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      7
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      1
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      0
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      7
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      7
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      7
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      7
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      6
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      6
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      6
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      6
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      6
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      6
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      5
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      5
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      5
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      5
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      3
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      3
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      3
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      3
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      3
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      3
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      3
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      3
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      1
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      0
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      1
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/moving",
+      0
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/eta",
+      2
     ],
     {
       "retain": true
