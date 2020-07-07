@@ -9,6 +9,7 @@ import json
 import gzip
 import re
 import os
+from math import floor
 
 def iterable(obj):
     try:
@@ -94,7 +95,7 @@ def test_get_handler():
     with open('local_settings.py.example') as f:
         for line in f:
             parts = line.split('=')
-            setattr(server, parts[0], parts[1].replace('\'', ''))
+            setattr(server, parts[0], eval(parts[1].strip()))
 
     server.pushover_client = FixtureChecker('pushover', 'send_message')
     server.mqtt_client = FixtureChecker('mqtt', 'publish')
@@ -105,6 +106,12 @@ def test_get_handler():
 
     geocode_checker = FixtureChecker('mapbox_geocode', None, lambda lon, lat: 'at 100 Fake Street')
     server.fetch_geocode = geocode_checker.call
+
+    def coords_to_pt(x):
+        return {'longitude': x[0], 'latitude': x[1]}
+    # use as-crow-flies distance / 10mph to fake ETAs
+    eta_checker = FixtureChecker('mapbox_eta', None, lambda start, end: floor(server.haversine(coords_to_pt(start), coords_to_pt(end)) / 10))
+    server.fetch_eta = eta_checker.call
 
     class TimeStub:
         t = 0
@@ -127,3 +134,4 @@ def test_get_handler():
         server.s3_client.finish()
         static_checker.finish()
         geocode_checker.finish()
+        eta_checker.finish()
