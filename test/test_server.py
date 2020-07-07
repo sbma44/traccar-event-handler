@@ -22,7 +22,10 @@ def iterable(obj):
 def assert_iterables_equal(a, b):
     assert len(a) == len(b)
     for i, x in enumerate(a):
-        assert a[i] == b[i]
+        if iterable(a[i]) and iterable(b[i]):
+            assert_iterables_equal(a[i], b[i])
+        else:
+            assert a[i] == b[i]
 
 re_GET = re.compile(r'"(GET .*?) HTTP/[\d\.]+"')
 re_time = re.compile(r'deviceTime=(\d+)&')
