@@ -14,7 +14,7 @@ int a2i(const char *s)
   int num=0;
   while(*s){
     num=((*s)-'0')+num*10;
-    s++;   
+    s++;
   }
   return num*sign;
 }
@@ -103,8 +103,8 @@ void setup() {
         if (json.success()) {
           Serial.println("\nparsed json");
           strcpy(mqtt_server, json["mqtt_server"]);
-          strcpy(mqtt_port, json["mqtt_port"]);          
-          strcpy(mqtt_topic, json["mqtt_topic"]);          
+          strcpy(mqtt_port, json["mqtt_port"]);
+          strcpy(mqtt_topic, json["mqtt_topic"]);
         } else {
           Serial.println("failed to load json config");
         }
@@ -114,26 +114,26 @@ void setup() {
   } else {
     Serial.println("failed to mount FS");
   }
-  
+
   pinMode(BUILTIN_LED, OUTPUT);     // Initialize the BUILTIN_LED pin as an output
   Serial.begin(115200);
-  
+
   WiFiManagerParameter custom_mqtt_server("server", "mqtt server", mqtt_server, 40);
   WiFiManagerParameter custom_mqtt_port("port", "mqtt port", mqtt_port, 6);
   WiFiManagerParameter custom_mqtt_topic("topic", "mqtt topic", mqtt_topic, 40);
-  
+
   //WiFiManager
   //Local intialization. Once its business is done, there is no need to keep it around
   WiFiManager wifiManager;
 
   //set config save notify callback
   wifiManager.setSaveConfigCallback(saveConfigCallback);
-  
+
   //add all your parameters here
   wifiManager.addParameter(&custom_mqtt_server);
   wifiManager.addParameter(&custom_mqtt_port);
   wifiManager.addParameter(&custom_mqtt_topic);
-    
+
   if (!wifiManager.autoConnect("YELLOWLIGHT")) {
     Serial.println("failed to connect and hit timeout");
     delay(3000);
