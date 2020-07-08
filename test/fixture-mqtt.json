@@ -19,12 +19,17 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,8,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,6,0"
+    ],
+    {}
   ],
   [
     [
@@ -37,12 +42,10 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,0,0"
     ],
-    {
-      "retain": true
-    }
+    {}
   ],
   [
     [
@@ -55,12 +58,10 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,0,0"
     ],
-    {
-      "retain": true
-    }
+    {}
   ],
   [
     [
@@ -70,11 +71,103 @@
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,1,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,24,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,25,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,7,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,23,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,14,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,15,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,0,0"
+    ],
+    {}
   ],
   [
     [
       "traccar/moving",
       1
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "0,0,50"
     ],
     {
       "retain": true
@@ -100,12 +193,24 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,0,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,20,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,0,0"
+    ],
+    {}
   ],
   [
     [
@@ -118,12 +223,17 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,8,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,25,0"
+    ],
+    {}
   ],
   [
     [
@@ -136,12 +246,24 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,2,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,18,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,2,0"
+    ],
+    {}
   ],
   [
     [
@@ -154,12 +276,17 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,19,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,24,0"
+    ],
+    {}
   ],
   [
     [
@@ -172,12 +299,24 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,25,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,17,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,20,0"
+    ],
+    {}
   ],
   [
     [
@@ -190,12 +329,17 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,17,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,41,0"
+    ],
+    {}
   ],
   [
     [
@@ -208,12 +352,24 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "49,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,48,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,45,0"
+    ],
+    {}
   ],
   [
     [
@@ -226,12 +382,17 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,38,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,46,0"
+    ],
+    {}
   ],
   [
     [
@@ -244,12 +405,24 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,42,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,48,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,46,0"
+    ],
+    {}
   ],
   [
     [
@@ -262,12 +435,17 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,35,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,44,0"
+    ],
+    {}
   ],
   [
     [
@@ -280,12 +458,24 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,49,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,48,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,39,0"
+    ],
+    {}
   ],
   [
     [
@@ -298,12 +488,17 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,32,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,43,0"
+    ],
+    {}
   ],
   [
     [
@@ -316,12 +511,372 @@
   ],
   [
     [
+      "traccar/led",
+      "45,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "45,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "45,50,0"
+    ],
+    {}
+  ],
+  [
+    [
       "traccar/eta",
       2
     ],
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "45,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "49,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "43,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "45,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "43,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "44,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "43,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "46,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "41,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "46,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "44,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "48,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "45,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "45,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "47,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "49,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "40,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,45,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,36,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "46,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "39,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "41,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "39,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "41,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "39,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "40,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "38,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "41,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "43,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "39,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -334,12 +889,17 @@
   ],
   [
     [
-      "traccar/eta",
-      3
+      "traccar/led",
+      "38,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "40,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -352,12 +912,24 @@
   ],
   [
     [
-      "traccar/eta",
-      3
+      "traccar/led",
+      "40,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "35,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "39,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -370,12 +942,17 @@
   ],
   [
     [
-      "traccar/eta",
-      3
+      "traccar/led",
+      "41,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "39,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -388,12 +965,107 @@
   ],
   [
     [
+      "traccar/led",
+      "44,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,39,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,18,0"
+    ],
+    {}
+  ],
+  [
+    [
       "traccar/eta",
-      4
+      3
     ],
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "38,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "37,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      3
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "38,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "34,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      3
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "39,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "44,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -406,12 +1078,17 @@
   ],
   [
     [
-      "traccar/eta",
-      4
+      "traccar/led",
+      "40,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "34,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -424,12 +1101,17 @@
   ],
   [
     [
-      "traccar/eta",
-      4
+      "traccar/led",
+      "39,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "35,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -442,12 +1124,17 @@
   ],
   [
     [
-      "traccar/eta",
-      4
+      "traccar/led",
+      "42,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "37,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -460,12 +1147,24 @@
   ],
   [
     [
-      "traccar/eta",
-      4
+      "traccar/led",
+      "29,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "38,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "38,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -475,6 +1174,156 @@
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "36,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "38,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,43,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,37,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,49,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "43,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "46,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "44,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "44,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "47,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "47,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "40,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "36,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "40,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "37,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -487,12 +1336,24 @@
   ],
   [
     [
-      "traccar/eta",
-      5
+      "traccar/led",
+      "37,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "35,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "40,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -505,12 +1366,17 @@
   ],
   [
     [
-      "traccar/eta",
-      5
+      "traccar/led",
+      "43,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "44,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -523,12 +1389,24 @@
   ],
   [
     [
-      "traccar/eta",
-      5
+      "traccar/led",
+      "50,32,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,9,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,0,0"
+    ],
+    {}
   ],
   [
     [
@@ -538,11 +1416,103 @@
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,33,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,15,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      5
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,10,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,7,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,14,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      5
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,22,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,18,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      5
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,0,0"
+    ],
+    {}
   ],
   [
     [
       "traccar/moving",
       1
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "0,0,50"
     ],
     {
       "retain": true
@@ -568,12 +1538,24 @@
   ],
   [
     [
-      "traccar/eta",
-      5
+      "traccar/led",
+      "50,8,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,9,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,12,0"
+    ],
+    {}
   ],
   [
     [
@@ -586,6 +1568,27 @@
   ],
   [
     [
+      "traccar/led",
+      "50,23,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,28,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,15,0"
+    ],
+    {}
+  ],
+  [
+    [
       "traccar/eta",
       5
     ],
@@ -595,12 +1598,47 @@
   ],
   [
     [
+      "traccar/led",
+      "47,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
+  ],
+  [
+    [
       "traccar/eta",
-      6
+      5
     ],
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "44,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "41,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "44,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -613,12 +1651,17 @@
   ],
   [
     [
-      "traccar/eta",
-      6
+      "traccar/led",
+      "40,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "40,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -631,12 +1674,24 @@
   ],
   [
     [
-      "traccar/eta",
-      6
+      "traccar/led",
+      "39,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -646,6 +1701,103 @@
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "48,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "46,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      6
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "47,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "45,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "45,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      6
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "48,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "46,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      6
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "47,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "44,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "47,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -658,12 +1810,17 @@
   ],
   [
     [
-      "traccar/eta",
-      7
+      "traccar/led",
+      "43,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "38,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -676,12 +1833,24 @@
   ],
   [
     [
-      "traccar/eta",
-      7
+      "traccar/led",
+      "39,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "47,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "41,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -694,12 +1863,77 @@
   ],
   [
     [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "44,50,0"
+    ],
+    {}
+  ],
+  [
+    [
       "traccar/eta",
-      8
+      7
     ],
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "43,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "43,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      7
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "43,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "46,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "45,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -712,12 +1946,17 @@
   ],
   [
     [
-      "traccar/eta",
-      8
+      "traccar/led",
+      "40,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "39,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -730,12 +1969,24 @@
   ],
   [
     [
-      "traccar/eta",
-      8
+      "traccar/led",
+      "42,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,25,0"
+    ],
+    {}
   ],
   [
     [
@@ -748,12 +1999,100 @@
   ],
   [
     [
+      "traccar/led",
+      "50,24,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "45,50,0"
+    ],
+    {}
+  ],
+  [
+    [
       "traccar/eta",
-      9
+      8
     ],
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "49,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "44,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,47,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      8
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,42,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "44,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      8
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,20,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,18,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,25,0"
+    ],
+    {}
   ],
   [
     [
@@ -766,12 +2105,17 @@
   ],
   [
     [
-      "traccar/eta",
-      9
+      "traccar/led",
+      "50,41,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,35,0"
+    ],
+    {}
   ],
   [
     [
@@ -784,12 +2128,24 @@
   ],
   [
     [
-      "traccar/eta",
-      9
+      "traccar/led",
+      "50,30,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,37,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,36,0"
+    ],
+    {}
   ],
   [
     [
@@ -802,17 +2158,144 @@
   ],
   [
     [
+      "traccar/led",
+      "50,21,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,44,0"
+    ],
+    {}
+  ],
+  [
+    [
       "traccar/eta",
       9
     ],
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,29,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,37,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,30,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,30,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,35,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,30,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,11,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,11,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,5,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,4,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,0,0"
+    ],
+    {}
   ],
   [
     [
       "traccar/moving",
       1
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "0,0,50"
     ],
     {
       "retain": true
@@ -838,12 +2321,17 @@
   ],
   [
     [
-      "traccar/eta",
-      9
+      "traccar/led",
+      "50,2,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,3,0"
+    ],
+    {}
   ],
   [
     [
@@ -856,12 +2344,24 @@
   ],
   [
     [
-      "traccar/eta",
-      9
+      "traccar/led",
+      "50,18,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,0,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,15,0"
+    ],
+    {}
   ],
   [
     [
@@ -874,12 +2374,17 @@
   ],
   [
     [
-      "traccar/eta",
-      9
+      "traccar/led",
+      "50,0,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,21,0"
+    ],
+    {}
   ],
   [
     [
@@ -892,17 +2397,137 @@
   ],
   [
     [
+      "traccar/led",
+      "50,23,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,22,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,19,0"
+    ],
+    {}
+  ],
+  [
+    [
       "traccar/eta",
       9
     ],
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,26,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,1,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,15,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,20,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,30,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,24,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,22,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      9
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,14,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,1,0"
+    ],
+    {}
   ],
   [
     [
       "traccar/moving",
       1
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "0,0,50"
     ],
     {
       "retain": true
@@ -928,12 +2553,17 @@
   ],
   [
     [
-      "traccar/eta",
-      9
+      "traccar/led",
+      "50,13,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,1,0"
+    ],
+    {}
   ],
   [
     [
@@ -946,6 +2576,27 @@
   ],
   [
     [
+      "traccar/led",
+      "50,20,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,29,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,34,0"
+    ],
+    {}
+  ],
+  [
+    [
       "traccar/eta",
       9
     ],
@@ -955,12 +2606,47 @@
   ],
   [
     [
+      "traccar/led",
+      "50,34,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,35,0"
+    ],
+    {}
+  ],
+  [
+    [
       "traccar/eta",
-      8
+      9
     ],
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,24,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,35,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,34,0"
+    ],
+    {}
   ],
   [
     [
@@ -973,12 +2659,17 @@
   ],
   [
     [
-      "traccar/eta",
-      8
+      "traccar/led",
+      "50,18,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,4,0"
+    ],
+    {}
   ],
   [
     [
@@ -991,12 +2682,24 @@
   ],
   [
     [
-      "traccar/eta",
-      8
+      "traccar/led",
+      "49,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "48,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "46,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1009,12 +2712,123 @@
   ],
   [
     [
+      "traccar/led",
+      "49,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,49,0"
+    ],
+    {}
+  ],
+  [
+    [
       "traccar/eta",
       8
     ],
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "49,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,49,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,0,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      8
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,16,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,45,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      8
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,46,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "48,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "45,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      8
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "43,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "45,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1027,12 +2841,24 @@
   ],
   [
     [
-      "traccar/eta",
-      7
+      "traccar/led",
+      "48,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "48,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,15,0"
+    ],
+    {}
   ],
   [
     [
@@ -1042,11 +2868,64 @@
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "48,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "46,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "48,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      7
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,49,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,3,0"
+    ],
+    {}
   ],
   [
     [
       "traccar/moving",
       1
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "0,0,50"
     ],
     {
       "retain": true
@@ -1072,12 +2951,17 @@
   ],
   [
     [
-      "traccar/eta",
-      7
+      "traccar/led",
+      "50,5,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,46,0"
+    ],
+    {}
   ],
   [
     [
@@ -1090,6 +2974,27 @@
   ],
   [
     [
+      "traccar/led",
+      "46,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "47,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "46,50,0"
+    ],
+    {}
+  ],
+  [
+    [
       "traccar/eta",
       7
     ],
@@ -1099,12 +3004,47 @@
   ],
   [
     [
+      "traccar/led",
+      "49,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "49,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "48,50,0"
+    ],
+    {}
+  ],
+  [
+    [
       "traccar/eta",
-      6
+      7
     ],
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,49,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "49,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1117,12 +3057,24 @@
   ],
   [
     [
-      "traccar/eta",
-      6
+      "traccar/led",
+      "50,48,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "44,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "49,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1135,12 +3087,17 @@
   ],
   [
     [
-      "traccar/eta",
-      6
+      "traccar/led",
+      "50,49,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,49,0"
+    ],
+    {}
   ],
   [
     [
@@ -1150,6 +3107,103 @@
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "48,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,49,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "46,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      6
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "47,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "40,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      6
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "39,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "43,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "44,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      6
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "40,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "41,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1162,12 +3216,24 @@
   ],
   [
     [
-      "traccar/eta",
-      5
+      "traccar/led",
+      "40,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "40,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "39,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1180,6 +3246,20 @@
   ],
   [
     [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "41,50,0"
+    ],
+    {}
+  ],
+  [
+    [
       "traccar/eta",
       5
     ],
@@ -1189,12 +3269,54 @@
   ],
   [
     [
+      "traccar/led",
+      "38,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "36,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
+  ],
+  [
+    [
       "traccar/eta",
-      4
+      5
     ],
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "45,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "41,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "44,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1207,12 +3329,17 @@
   ],
   [
     [
-      "traccar/eta",
-      4
+      "traccar/led",
+      "42,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "47,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1225,12 +3352,24 @@
   ],
   [
     [
-      "traccar/eta",
-      4
+      "traccar/led",
+      "48,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "45,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "47,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1243,12 +3382,17 @@
   ],
   [
     [
-      "traccar/eta",
-      4
+      "traccar/led",
+      "45,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "48,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1261,12 +3405,24 @@
   ],
   [
     [
-      "traccar/eta",
-      4
+      "traccar/led",
+      "45,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "46,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "45,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1276,6 +3432,156 @@
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,42,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "45,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "43,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "46,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "40,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "36,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "35,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "39,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "40,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "43,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "38,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      4
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "38,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "36,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "40,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1288,12 +3594,24 @@
   ],
   [
     [
-      "traccar/eta",
-      3
+      "traccar/led",
+      "39,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "40,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "40,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1306,12 +3624,17 @@
   ],
   [
     [
-      "traccar/eta",
-      3
+      "traccar/led",
+      "40,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "39,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1324,12 +3647,24 @@
   ],
   [
     [
-      "traccar/eta",
-      3
+      "traccar/led",
+      "41,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,46,0"
+    ],
+    {}
   ],
   [
     [
@@ -1342,6 +3677,20 @@
   ],
   [
     [
+      "traccar/led",
+      "50,45,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
+  ],
+  [
+    [
       "traccar/eta",
       3
     ],
@@ -1351,12 +3700,100 @@
   ],
   [
     [
+      "traccar/led",
+      "44,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,49,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "46,50,0"
+    ],
+    {}
+  ],
+  [
+    [
       "traccar/eta",
-      2
+      3
     ],
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "41,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "41,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      3
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "39,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "39,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      3
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "43,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "43,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1369,12 +3806,24 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "45,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "44,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "40,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1387,12 +3836,17 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "44,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1405,12 +3859,24 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "48,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "43,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1423,12 +3889,24 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "43,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "47,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "48,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1441,12 +3919,17 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,47,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "39,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1459,12 +3942,24 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "43,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "40,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "43,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1477,12 +3972,17 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "43,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "42,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1495,12 +3995,24 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "43,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,41,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "48,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1513,12 +4025,17 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "43,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "47,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1531,12 +4048,24 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "49,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,48,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,46,0"
+    ],
+    {}
   ],
   [
     [
@@ -1549,12 +4078,17 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,42,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,48,0"
+    ],
+    {}
   ],
   [
     [
@@ -1567,12 +4101,24 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "49,50,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "45,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "47,50,0"
+    ],
+    {}
   ],
   [
     [
@@ -1582,11 +4128,382 @@
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,49,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "48,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,46,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "49,50,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,42,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,29,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,38,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,43,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,44,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,41,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,39,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,24,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,46,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,29,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,37,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,37,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,36,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,41,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,36,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,37,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,43,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,43,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,33,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,28,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,0,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,12,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,21,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,0,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,6,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,12,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,0,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,16,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,12,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,0,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,0,0"
+    ],
+    {}
   ],
   [
     [
       "traccar/moving",
       1
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "0,0,50"
     ],
     {
       "retain": true
@@ -1612,12 +4529,17 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,9,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,8,0"
+    ],
+    {}
   ],
   [
     [
@@ -1630,12 +4552,10 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,0,0"
     ],
-    {
-      "retain": true
-    }
+    {}
   ],
   [
     [
@@ -1648,12 +4568,24 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,8,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,5,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,21,0"
+    ],
+    {}
   ],
   [
     [
@@ -1666,12 +4598,17 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,12,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,0,0"
+    ],
+    {}
   ],
   [
     [
@@ -1681,11 +4618,112 @@
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,13,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,0,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,0,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,0,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,0,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,0,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,2,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,3,0"
+    ],
+    {}
   ],
   [
     [
       "traccar/moving",
       1
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "0,0,50"
     ],
     {
       "retain": true
@@ -1711,12 +4749,31 @@
   ],
   [
     [
-      "traccar/eta",
-      2
+      "traccar/led",
+      "50,9,0"
     ],
-    {
-      "retain": true
-    }
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,3,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,4,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,8,0"
+    ],
+    {}
   ],
   [
     [
@@ -1726,11 +4783,50 @@
     {
       "retain": true
     }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,7,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/led",
+      "50,7,0"
+    ],
+    {}
+  ],
+  [
+    [
+      "traccar/eta",
+      2
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "50,0,0"
+    ],
+    {}
   ],
   [
     [
       "traccar/moving",
       1
+    ],
+    {
+      "retain": true
+    }
+  ],
+  [
+    [
+      "traccar/led",
+      "0,0,50"
     ],
     {
       "retain": true
