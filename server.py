@@ -3,6 +3,7 @@ import os, os.path
 import time
 import io
 import json
+import colorsys
 from urllib.parse import unquote, urlparse, parse_qs
 from math import radians, cos, sin, asin, sqrt, floor
 
@@ -125,6 +126,12 @@ class GetHandler(BaseHTTPRequestHandler):
                     mqtt_client.publish(MQTT_TOPIC + 'eta', eta, retain=True)
                 GetHandler.traccar_last_eta_request = time.time()
 
+            # set LED to reflect speed, green -> red
+            speed_hue = (msg['speed_mph'] / 60.0) * 0.333
+            speed_color = [str(floor(50.0 * x)) for x in colorsys.hsv_to_rgb(speed_hue, 1.0, 1.0)]
+            mqtt_client.publish(MQTT_TOPIC + 'led', ','.join(speed_color))
+
+
         else:
             # get events from last 3m
             eligible_events = [e for e in GetHandler.traccar_events if (time.time() - float(e.get('deviceTime', 0))/1000) < 180]
@@ -178,6 +185,9 @@ class GetHandler(BaseHTTPRequestHandler):
                         pushover_client.send_message(pushover_msg)
 
                     mqtt_client.publish(MQTT_TOPIC + 'moving', 1, retain=True)
+
+                    # set LED to blue
+                    mqtt_client.publish(MQTT_TOPIC + 'led', '0,0,50', retain=True)
 
                     GetHandler.traccar_last_start = None
                     GetHandler.traccar_state = 'STOPPED'
