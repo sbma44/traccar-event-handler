@@ -203,8 +203,8 @@ class GetHandler(BaseHTTPRequestHandler):
 
         msg = json.loads(body)
         event_type = msg.get('event', {}).get('type')
-        if not event_type in ('deviceOnline', 'deviceOffline'):
-            pushover_client.send_message('traccar event: {}'.format(event_type))
+        if not event_type in ('deviceOnline', 'deviceOffline', 'deviceStopped', 'deviceUnknown', 'deviceMoving'):
+            pushover_client.send_message('traccar event: {}'.format(json.dumps(msg.get('event', {}))))
 
         self.send_response(200)
         self.send_header("Content-Type", "text/ascii")
