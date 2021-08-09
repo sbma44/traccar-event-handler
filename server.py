@@ -220,10 +220,26 @@ if __name__ == '__main__':
     mqtt_client.loop_start()
 
     fn = fetch_static_map(-77.0366, 38.8976)
+    msg = 'traccar event handler started'
+    if not fn:
+        msg += ' (maps broken)'
+
+    trip_io = io.BytesIO()
+    trip_io.write(str.encode(str(time.time())))
+    trip_io.flush()
+    trip_io.seek(0)
+    try:
+        s3_client.upload_fileobj(trip_io, S3_BUCKET, '{}_last_start'.format(S3_PATH))
+        trip_io.close()
+    except Exception as e:
+        msg += ' (s3 broken)'
+        print('ERROR: {}'.format(str(e)))
+
     if fn:
-        pushover_client.send_message('traccar event handler started', attachment=fn)
+        pushover_client.send_message(msg, attachment=fn)
     else:
-        pushover_client.send_message('traccar event handler started (maps not working)')
+        pushover_client.send_message(msg)
+
 
     from http.server import HTTPServer
     server = HTTPServer(('0.0.0.0', 3080), GetHandler)
