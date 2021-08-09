@@ -3,12 +3,12 @@ from troposphere import Ref, Template, Tags, Join, Output, GetAtt
 from awacs.aws import Allow, Policy, Principal, Statement, Action
 import troposphere.iam
 
-S3_PATH='sbma44/traccar/'
+# S3_BUCKET='sbma44'
+# S3_PATH='traccar/'
 try:
     from local_settings import *
 except:
     pass
-S3_BUCKET=S3_PATH.split('/')[0]
 
 t = Template()
 t.set_description('Traccar event handler user for managing traces')
@@ -18,30 +18,13 @@ s3policy = troposphere.iam.Policy(
     PolicyDocument= Policy(
         Statement=[
             Statement(
-                Sid='S3ListBucket',
-                Effect=Allow,
-                Action=[
-                    Action('s3', 'ListBucket')
-                ],
-                Resource=['arn:aws:s3:::{}'.format(S3_BUCKET)]
-            ),
-            Statement(
-                Sid='S3PutGet',
+                Sid='S3PutGetList',
                 Effect=Allow,
                 Action=[
                     Action('s3', 'Get*'),
                     Action('s3', 'Put*')
                 ],
-                Resource=['arn:aws:s3:::{}*'.format(S3_PATH)]
-            ),
-            Statement(
-                Sid='S3ListAccess',
-                Effect=Allow,
-                Action=[
-                    Action('s3', 'ListObjects'),
-                    Action('s3', 'ListObjectsV2')
-                ],
-                Resource=['arn:aws:s3:::{}*'.format(S3_PATH)]
+                Resource=['arn:aws:s3:::{}/{}*'.format(S3_BUCKET, S3_PATH)]
             )
         ]
     )
